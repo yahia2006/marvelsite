@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Movies</title>
+    <link rel="stylesheet" href="marvel.css">
+    <link rel="website icon" href="img/sitelogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="loading-page">
+        <div id="loading">
+            <div class="img">
+                <img src="img/sitelogo.png" id="img">
+            </div>
+            <div class="text">
+                <h1 id="laod">Loading:<span id="load-count">0%</span></h1>
+                <div class="load-border">
+                    <div id="border-color"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let num=0;
+count()
+
+function count(){
+    document.getElementById('load-count').innerHTML=num+"%";
+    document.getElementById('border-color').style.width=num+"%"
+    num++
+    if(num<101){
+        setTimeout(count,50)
+    }
+    if(num==100){
+       window.location='marvela.html'
+    }
+}
+    </script>
+    
+</body>
+</html>
